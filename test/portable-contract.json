@@ -1,0 +1,6 @@
+{
+  "runtime": "gh/ichinya/lekalo-php#16e90e4e7b56cc42395372684338716c1670bd8b",
+  "path": "src/Controller/HealthController.php",
+  "valid": "<?php use Symfony\\Component\\Routing\\Attribute\\Route; final class C { #[Route('/health', methods: ['GET'])] public function index() {} }",
+  "invalid": "<?php final class C { public function index() {} }"
+}
