@@ -1,0 +1,10 @@
+{
+  "schema": "lekalo/package/v1",
+  "id": "lekalo-php-symfony",
+  "version": "0.1.0",
+  "kind": "rules",
+  "files": [
+    "contracts/http.json"
+  ],
+  "rules": "contracts/http.json"
+}

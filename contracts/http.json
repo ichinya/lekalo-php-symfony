@@ -1,0 +1,45 @@
+{
+  "schema": "lekalo/contract-rules/v1",
+  "requires": [
+    "http.routes/v1"
+  ],
+  "bindings": {
+    "php.attribute-router/v1": {
+      "class": "Symfony\\Component\\Routing\\Attribute\\Route",
+      "files": [
+        "src/Controller/HealthController.php"
+      ]
+    }
+  },
+  "checks": [
+    {
+      "id": "health-route",
+      "schema": {
+        "type": "object",
+        "required": [
+          "routes"
+        ],
+        "properties": {
+          "routes": {
+            "type": "array",
+            "contains": {
+              "type": "object",
+              "required": [
+                "method",
+                "path"
+              ],
+              "properties": {
+                "method": {
+                  "const": "GET"
+                },
+                "path": {
+                  "const": "/health"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
